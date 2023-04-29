@@ -1,6 +1,6 @@
 FROM debian
 RUN apt-get update
-RUN apt-get install -qqy x11-apps gtk2.0 zip texinfo
+RUN apt-get install -qqy x11-apps zip texinfo curl libgtk2.0-dev bison flex
 RUN mkdir -p /opt/scripts
 WORKDIR /opt/scripts
 RUN curl -X GET https://github.com/puppylinux-woof-CE/gtkdialog/archive/refs/heads/master.zip -k -L -o gtkdialog.zip
